@@ -1,0 +1,22 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+
+
+
+```{r}
+
+gc() # garbage collection - It can be useful to call gc after a large object has been removed, as this may prompt R to return memory to the operating system.
+library(pacman)
+p_load(tidyverse, lubridate)
+
+# Source in all your functions:
+# walk is the 'silent' version of map, which is similar to lapply.
+list.files('Question1/code/', full.names = T, recursive = T) %>% as.list() %>% walk(~source(.))
+
+```
+
+
